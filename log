@@ -1,0 +1,82 @@
+Tue Mar 23 21:58:24 UTC 2021: 
+ list.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:5:0:
+list.c: In function ‘createList’:
+list.c:35:8: error: ‘List {aka struct List}’ has no member named ‘size’
+    list->size=0;
+        ^~
+At top level:
+list.c:32:11: error: ‘createList’ defined but not used [-Werror=unused-function]
+     List* createList(){
+           ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+Tue Mar 23 21:58:41 UTC 2021: 
+ list.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:5:0:
+list.c: In function ‘createList’:
+list.c:34:8: error: ‘List {aka struct List}’ has no member named ‘size’
+    list->size=0;
+        ^~
+list.c: At top level:
+list.c:39:6: error: expected identifier or ‘(’ before ‘return’
+      return NULL;
+      ^~~~~~
+list.c:40:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+Compilation failed
+Tue Mar 23 21:58:58 UTC 2021: 
+ list.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function ‘createList’:
+list.c:35:8: error: ‘List {aka struct List}’ has no member named ‘size’
+    list->size=0;
+        ^~
+test.c: In function ‘createList’:
+test.c:432:5: error: ‘main’ is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:452:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:452:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+At top level:
+test.c:432:5: error: ‘main’ defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:8:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+In file included from test.c:5:0:
+list.c:81:6: error: ‘cleanList’ defined but not used [-Werror=unused-function]
+ void cleanList(List * list) {
+      ^~~~~~~~~
+list.c:72:8: error: ‘popBack’ defined but not used [-Werror=unused-function]
+ void * popBack(List * list) {
+        ^~~~~~~
+list.c:59:6: error: ‘pushBack’ defined but not used [-Werror=unused-function]
+ void pushBack(List * list, const void * data) {
+      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+Tue Mar 23 21:59:55 UTC 2021: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function ‘createList’:
+list.c:34:8: error: ‘List {aka struct List}’ has no member named ‘size’
+    list->size=0;
+        ^~
+Compilation failed
+Tue Mar 23 22:00:58 UTC 2021: 
+ list.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+793b081
