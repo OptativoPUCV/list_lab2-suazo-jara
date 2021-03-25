@@ -116,7 +116,7 @@ void * popBack(List * list) {
 
 //EJERCICIO 6
 void * popCurrent(List * list) {
-  void* aux = list->current->data;
+  void* aux = list->current;
   //list->current->prev = list->current;
   return aux;
 }
