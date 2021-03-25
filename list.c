@@ -93,8 +93,12 @@ void pushBack(List * list, const void * data) {
 //EJERCICIO 5
 void pushCurrent(List * list, const void * data) {
   Node* nuevoNodo = createNode(data);
-  if (!list->current->next)
-    list->current->next = nuevoNodo;
+  nuevoNodo->prev = list->current;
+  if (!list->current->next){
+    printf("ENTRÓ\n");
+    list->tail = nuevoNodo;
+    nuevoNodo->next = NULL;
+  }
   else{
     nuevoNodo->prev = list->current->next;
     nuevoNodo->next = list->current->next->next;
