@@ -102,6 +102,7 @@ void pushCurrent(List * list, const void * data) {
   else{
     nuevoNodo->next = list->current->next;
   }
+  list->current->next = nuevoNodo;
 }
 
 void * popFront(List * list) {
