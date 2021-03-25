@@ -37,8 +37,13 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-  list->current = list->head;
-  return (void*)list->head->data;
+  if (list->head && list->head->data){
+    list->current = list->head;
+    return list->head->data;
+  }
+  return NULL;
+  //list->current = list->head;
+  //return (void*)list->head->data;
 }
 
 void * nextList(List * list) {
@@ -48,13 +53,15 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-    list->current = list->tail;
-    return list->current->data;
+    //list->current = list->tail;
+    //return list->current->data;
+    return NULL;
 }
 
 void * prevList(List * list) {
-    list->current = list->current->prev;
-    return (void*)list->current->data;
+    //list->current = list->current->prev;
+    //return (void*)list->current->data;
+    return NULL;
 }
 
 void pushFront(List * list, const void * data) {
