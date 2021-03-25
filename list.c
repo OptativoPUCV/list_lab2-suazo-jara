@@ -42,13 +42,15 @@ void * firstList(List * list) {
     return list->head->data;
   }
   return NULL;
-  //list->current = list->head;
-  //return (void*)list->head->data;
 }
 
 void * nextList(List * list) {
+  if (list->current->next && list->current->next->data){
+    list->current = list->current->next;
+    return list->current;
+  }
   //list->current = list->current->next;
-  //return (void *)list->current->data;
+  //return list->current->data;
   return NULL;
 }
 
