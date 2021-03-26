@@ -116,19 +116,22 @@ void * popBack(List * list) {
 
 //EJERCICIO 6 (pendiente)
 void * popCurrent(List * list) {
+  //Si el nodo se encuentra entre dos nodos
   if(list->current->prev && list->current->next){
     list->current->prev->next = list->current->next;
     list->current->next->prev = list->current->prev;
   }
 
+  //Si el nodo es la cabeza
   if (list->current == list->head){
     list->head = list->current->next;
     list->head->prev = NULL;
   }
-
+  
+  //Si el nodo es la cola
   if (list->current == list->tail){
     list->tail = list->current->prev;
-    list->tail->next = NULL;
+    //list->tail->next = NULL;
   }
   return list->current->data;
 }
