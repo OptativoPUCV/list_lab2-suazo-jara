@@ -131,7 +131,7 @@ void * popCurrent(List * list) {
   //Si el nodo es la cola
   if (list->current == list->tail){
     list->tail = list->current->prev;
-    //list->tail->next = NULL;
+    list->tail->next = NULL;
   }
   return list->current->data;
 }
