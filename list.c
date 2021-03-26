@@ -116,27 +116,7 @@ void * popBack(List * list) {
 
 //EJERCICIO 6
 void * popCurrent(List * list) {
-  if (!list->head && !list->current)
-    return NULL;
-
-  Node *aux = list->current;
-  Node *aux_prev = aux->prev;
-  Node *aux_next = aux->next;
-  void *aux_data = aux->data;
-
-  if (list->current == list->head) {
-    list->current = aux_next;
-    list->head = aux_next;
-    aux_prev = list->head->next;
-    list->current->prev = NULL;
-  }
-  else {
-    list->current = aux_next;
-    if (aux_next)
-      aux_next->prev = aux_prev;  
-  }
-  free(aux);
-  return aux_data;
+  return NULL;
 }
 
 void cleanList(List * list) {
