@@ -114,7 +114,7 @@ void * popBack(List * list) {
     return popCurrent(list);
 }
 
-//EJERCICIO 6
+//EJERCICIO 6 (pendiente)
 void * popCurrent(List * list) {
   return NULL;
 }
