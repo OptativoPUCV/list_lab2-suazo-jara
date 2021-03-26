@@ -121,7 +121,6 @@ void * popCurrent(List * list) {
     list->tail = list->current;
   else
     list->current->next->next = list->current->prev;
-  printf("%p", list->current->data);
   return aux;
 }
 
